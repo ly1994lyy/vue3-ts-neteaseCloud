@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { getArtistDetail } from '@/apis/artist';
+import { getArtistDetail } from '@/apis/artist'
 
 interface IArtist {
   id: number
@@ -23,7 +23,7 @@ const artistInfo = ref<IArtist>({
   id: 0,
   name: '',
   desc: '',
-  cover: '',
+  cover: ''
 })
 
 const route = useRoute()

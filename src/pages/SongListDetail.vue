@@ -4,7 +4,7 @@
       <CommonImage
         :pic-url="playList.coverImgUrl"
         radius-size="md"
-        img-size="60"
+        img-size="40"
       />
       <div class="ml-10">
         <div class="font-bold text-xl">{{ playList.name }}</div>

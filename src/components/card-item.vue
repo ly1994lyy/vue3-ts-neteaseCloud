@@ -1,6 +1,6 @@
 <template>
   <div class="w-1/6 px-4" @click="getSonglistDetail">
-    <CommonImage :pic-url="picUrl" :radius-size="radiusSize" />
+    <CommonImage :pic-url="picUrl" :img-size="imgSize" />
     <div
       class="w-full text-xs truncate text-red-800 dark:text-white mt-1 cursor-pointer"
     >
@@ -10,15 +10,17 @@
 </template>
 
 <script setup lang="ts">
+import CommonImage from '@/components/common-image.vue'
+
 interface IPros {
   picUrl: string
   name: string
   id: number
-  radiusSize: string
+  imgSize: string
 }
 
 const props = withDefaults(defineProps<IPros>(), {
-  radiusSize: 'md'
+  imgSize: 'full'
 })
 const router = useRouter()
 

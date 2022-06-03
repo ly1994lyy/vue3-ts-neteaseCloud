@@ -65,8 +65,8 @@
 </template>
 
 <script lang="ts" setup>
-import { usePlay } from '@/hooks/usePlay';
-import { formatDuration, formatTimestamp } from '@/utils/time-filter';
+import { usePlay } from '@/hooks/usePlay'
+import { formatDuration, formatTimestamp } from '@/utils/time-filter'
 
 const audioRef = ref<HTMLElement | null>(null)
 const duration = ref(0)
@@ -75,11 +75,13 @@ const playStatus = ref(false)
 const { url } = usePlay()
 
 const play = () => {
+  if (!url.value) return
   playStatus.value = true
   audioRef.value.play()
 }
 
 const pause = () => {
+  if (!url.value) return
   playStatus.value = false
   audioRef.value.pause()
 }

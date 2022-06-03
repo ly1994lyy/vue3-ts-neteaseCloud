@@ -1,7 +1,7 @@
 <template>
-  <div class="font-black mb-2 px-4">推荐歌单</div>
+  <div class="font-black mb-2 px-4 text-xl">推荐歌单</div>
   <div class="flex flex-wrap justify-between">
-    <PlaylistItem
+    <CardItem
       v-for="item in personalizeList"
       :id="item.id"
       :key="item.id"
@@ -10,9 +10,9 @@
       :pic-url="item.picUrl"
     />
   </div>
-  <div class="font-black mb-2 px-4 mt-2">最新歌曲</div>
+  <div class="font-black mb-2 px-4 mt-4 text-xl">最新歌曲</div>
   <div class="flex flex-wrap justify-between">
-    <PlaylistItem
+    <CardItem
       v-for="item in newSongList"
       :id="item.id"
       :key="item.id"
@@ -20,21 +20,24 @@
       :pic-url="item.picUrl"
     />
   </div>
-  <div class="font-black mb-2 px-4 mt-2">热门歌手</div>
+  <div class="font-black mb-2 px-4 mt-4 text-xl">热门歌手</div>
   <div class="flex flex-wrap justify-between">
-    <PlaylistItem
+    <ArtistItem
       v-for="item in hotArtistList"
       :id="item.id"
       :key="item.id"
       :name="item.name"
-      :pic-url="item.picUrl"
+      :pic-url="item.img1v1Url"
       radius-size="full"
+      img-size="40"
     />
   </div>
 </template>
 
 <script setup lang="ts">
 import { getHotArtist, getNewSong, getPersonalized } from '@/apis/home'
+import ArtistItem from '@/components/artist-item.vue'
+import CardItem from '@/components/card-item.vue'
 
 interface IPersonalize {
   id: number

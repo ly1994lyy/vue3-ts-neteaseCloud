@@ -1,8 +1,8 @@
 <template>
   <img
-    :class="`w-${imgSize ? imgSize : 'full'} h-${imgSize ? imgSize : 'full'} ${
-      radiusSize ? `rounded-${radiusSize}` : ''
-    } hover:opacity-80 cursor-pointer`"
+    :class="`w-${imgSize ? imgSize : 'full'} h-${
+      imgSize ? imgSize : 'full'
+    } rounded-md hover:opacity-80 cursor-pointer`"
     :src="picUrl"
     alt=""
     @click="playSong"
@@ -15,7 +15,6 @@ import { usePlay } from '@/hooks/usePlay'
 interface IPros {
   picUrl: string
   id?: number
-  radiusSize: string
   imgSize: string
 }
 

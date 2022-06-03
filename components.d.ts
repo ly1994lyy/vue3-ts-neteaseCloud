@@ -5,12 +5,13 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ArtistItem: typeof import('./src/components/artist-item.vue')['default']
+    CardItem: typeof import('./src/components/card-item.vue')['default']
     CommonImage: typeof import('./src/components/common-image.vue')['default']
     CommonText: typeof import('./src/components/common-text.vue')['default']
     LayoutMain: typeof import('./src/components/layout/layout-main.vue')['default']
     LayoutNav: typeof import('./src/components/layout/layout-nav.vue')['default']
     PlayerAudio: typeof import('./src/components/player-audio.vue')['default']
-    PlaylistItem: typeof import('./src/components/playlist-item.vue')['default']
     PlaylistSongItem: typeof import('./src/components/playList/playlist-song-item.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
