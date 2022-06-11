@@ -1,9 +1,13 @@
 <template>
   <div class="w-1/6 px-4 flex justify-center" @click="getArtistDetail">
     <div>
-      <img class="w-40 h-40 rounded-full cursor-pointer" :src="picUrl" alt="" />
+      <img
+        class="w-40 h-40 rounded-full cursor-pointer hover:opacity-80"
+        :src="picUrl"
+        alt=""
+      />
       <div
-        class="w-full text-xs truncate text-red-800 dark:text-white cursor-pointer flex justify-center mt-2"
+        class="w-full text-xs truncate text-red-800 font-bold dark:text-white cursor-pointer flex justify-center mt-2"
       >
         {{ name }}
       </div>
