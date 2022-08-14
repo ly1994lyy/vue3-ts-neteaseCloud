@@ -20,6 +20,11 @@ const routes = [
         path: 'artistinfo/:id',
         name: 'artistinfo',
         component: () => import('@/pages/ArtistDetail.vue')
+      },
+      {
+        path: 'artistlist',
+        name: 'artistlist',
+        component: () => import('@/pages/ArtistList.vue')
       }
     ]
   }

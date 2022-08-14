@@ -3,15 +3,16 @@
     <div
       class="px-20 w-screen h-20 flex justify-between items-center bg-white dark:bg-black"
     >
-      <div class="flex cursor-pointer" @click="goHome">
-        <img src="../../../public/favicon.ico" alt="" />
-        <p class="ml-2 text-xl font-black">网易云音乐</p>
+      <div class="flex cursor-pointer items-center" @click="goHome">
+        <img class="w-12 h-12" src="../../../public/Music.png" alt="" />
+        <p class="ml-2 text-xl font-black">唯有音乐</p>
       </div>
       <div class="flex px-5">
         <div
           v-for="menu in menuList"
           :key="menu.path"
           class="mx-5 font-bold cursor-pointer"
+          @click="routerPage(menu.path)"
         >
           {{ menu.menuName }}
         </div>
@@ -49,11 +50,15 @@ const goHome = () => {
   router.push({ name: 'home' })
 }
 
+const routerPage = (pathName: string) => {
+  router.push({ name: pathName })
+}
+
 const menuList = [
-  { menuName: '首页', path: '' },
+  { menuName: '首页', path: 'home' },
   { menuName: '资源库', path: '' },
   { menuName: '曲库', path: '' },
-  { menuName: '歌手', path: '' },
+  { menuName: '歌手', path: 'artistlist' },
   { menuName: '歌单', path: '' }
 ]
 
