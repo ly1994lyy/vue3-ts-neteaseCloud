@@ -2,8 +2,8 @@
   <div class="w-1/6 px-4 flex justify-center" @click="getArtistDetail">
     <div>
       <img
+        v-image="picUrl"
         class="w-40 h-40 rounded-full cursor-pointer hover:opacity-80"
-        :src="picUrl"
         alt=""
       />
       <div

@@ -1,9 +1,9 @@
 <template>
   <img
+    v-image="picUrl"
     :class="`w-${imgSize ? imgSize : 'full'} h-${
       imgSize ? imgSize : 'full'
     } rounded-md hover:opacity-80 cursor-pointer`"
-    :src="picUrl"
     alt=""
     @click="playSong"
   />

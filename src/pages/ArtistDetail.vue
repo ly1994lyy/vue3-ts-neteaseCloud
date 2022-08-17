@@ -2,7 +2,7 @@
   <div>
     <div class="flex">
       <div>
-        <img class="w-40 h-40 rounded-full" :src="artistInfo.cover" alt="" />
+        <img v-image="artistInfo.cover" class="w-40 h-40 rounded-full" alt="" />
       </div>
       <div>{{ artistInfo.name }}</div>
     </div>

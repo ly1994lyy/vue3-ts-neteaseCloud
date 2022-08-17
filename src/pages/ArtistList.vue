@@ -38,8 +38,8 @@
         @click="getArtistDetail(artist.id)"
       >
         <img
+          v-image="artist.img1v1Url"
           class="w-4/5 rounded-md cursor-pointer hover:opacity-80"
-          :src="artist.img1v1Url"
           alt=""
         />
         <div class="m-2">{{ artist.name }}</div>
@@ -72,6 +72,8 @@ const queryArtistList = async () => {
     console.log(e)
   }
 }
+
+const loadImg = e => {}
 
 const setType = (val: string) => {
   artistParams.value.type = val

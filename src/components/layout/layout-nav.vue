@@ -4,7 +4,7 @@
       class="px-20 w-screen h-20 flex justify-between items-center bg-white dark:bg-black"
     >
       <div class="flex cursor-pointer items-center" @click="goHome">
-        <img class="w-12 h-12" src="../../../public/Music.png" alt="" />
+        <img class="w-12 h-12" src="@/assets/Music.png" alt="" />
         <p class="ml-2 text-xl font-black">唯有音乐</p>
       </div>
       <div class="flex px-5">
