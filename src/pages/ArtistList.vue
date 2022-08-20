@@ -73,8 +73,6 @@ const queryArtistList = async () => {
   }
 }
 
-const loadImg = e => {}
-
 const setType = (val: string) => {
   artistParams.value.type = val
   queryArtistList()

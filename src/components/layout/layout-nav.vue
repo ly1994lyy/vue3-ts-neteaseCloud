@@ -11,7 +11,11 @@
         <div
           v-for="menu in menuList"
           :key="menu.path"
-          class="mx-5 font-bold cursor-pointer"
+          :class="`mx-5 font-bold cursor-pointer ${
+            route.name === menu.path
+              ? 'border-b-2 border-gray-600 dark:border-white'
+              : ''
+          }`"
           @click="routerPage(menu.path)"
         >
           {{ menu.menuName }}
@@ -41,6 +45,7 @@
 
 <script setup lang="ts">
 const router = useRouter()
+const route = useRoute()
 
 const login = () => {
   console.log('sds')
