@@ -6,7 +6,7 @@ import axios, {
 } from 'axios'
 
 const instance: AxiosInstance = axios.create({
-  baseURL: 'http://148.100.76.63/:3000/'
+  baseURL: 'http://148.100.76.63:3000/'
 })
 
 instance.interceptors.request.use(
