@@ -21,6 +21,9 @@
           {{ menu.menuName }}
         </div>
       </div>
+      <div>
+        <layout-search />
+      </div>
       <div class="flex">
         <svg
           xmlns="http://www.w3.org/2000/svg"

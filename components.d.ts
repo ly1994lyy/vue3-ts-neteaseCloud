@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     CommonText: typeof import('./src/components/common-text.vue')['default']
     LayoutMain: typeof import('./src/components/layout/layout-main.vue')['default']
     LayoutNav: typeof import('./src/components/layout/layout-nav.vue')['default']
+    LayoutSearch: typeof import('./src/components/layout/layout-search.vue')['default']
     PlayerAudio: typeof import('./src/components/player-audio.vue')['default']
     PlaylistSongItem: typeof import('./src/components/playList/playlist-song-item.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
